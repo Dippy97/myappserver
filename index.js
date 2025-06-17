@@ -3,6 +3,8 @@ import bodyParser from 'body-parser';
 import getRiskOverview from './routes/riskOverview.js';
 
 const app = express();
+const cors = require('cors');
+app.use(cors());
 const PORT = process.env.PORT || 8080;
 app.use(bodyParser.json());
 app.use('/', getRiskOverview);
